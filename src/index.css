@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Tahoma, sans-serif;
+  }
+}
+
+/* Hide scrollbars for horizontal filter chips while keeping scroll */
+nav ::-webkit-scrollbar,
+.flex.overflow-x-auto::-webkit-scrollbar {
+  display: none;
+}
+.flex.overflow-x-auto {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
